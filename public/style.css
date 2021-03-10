@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Source+Code+Pro&display=swap");
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  padding: 20px;
+  background-color: #1a1a2e;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: 0;
+}
+
+header nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% auto 25%;
+      grid-template-columns: 25% auto 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .right {
+  text-align: right;
+}
+
+body {
+  background-color: #0f3460;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding-top: 100px;
+}
+
+body .container #currency {
+  margin: 0px 0px 50px 0px;
+  padding: 0px;
+}
+
+body .container #currency li {
+  display: inline-block;
+}
+
+body .container #currency li button {
+  background-color: #16213e;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .table {
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: #16213e;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+body .container .table div {
+  border-top: 1px solid #4b5d67;
+}
+
+body .container .form {
+  margin-top: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 250px;
+      grid-template-columns: 150px 250px;
+  grid-row-gap: 10px;
+}
+/*# sourceMappingURL=style.css.map */

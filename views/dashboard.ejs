@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="../public/style.css">
+    </head>
+    <header>
+        <nav>
+            <div style="font-size: 25px;">My Crypto Portfolio</div>
+            <div></div>
+            <div class="right">
+                <a style="padding-right: 20px;" href="./public/index.html">Add Coin</a>
+                <a href="/dashboard">Refresh</a>
+            </div> 
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+            <div style="font-size: 20px;">Portfolio: <%= format(portfolioValue, currency) %></div><br>
+            <ul id="currency">
+                <li>Currency: </li>
+                <li style="margin-left: 10px;"><button><a href="/dashboard?currency=usd">$ USD</a></button></li>
+                <li><button><a href="/dashboard?currency=eur">EUR €</a></button></li>
+                <li><button><a href="/dashboard?currency=btc">BTC &#8383</a></button></li>
+            </ul>
+            
+            <div class="table">
+                <div class="title">Crypto</div>
+                <div class="title">Amount</div>
+                <div class="title">Price</div>
+                <div class="title">Holdings Value</div>
+                <div class="title">Update/Remove</div>
+                
+                <% holdings.forEach( (holding) => { %>
+                    <div><%= holding.asset.charAt(0).toUpperCase() + holding.asset.slice(1) %></div>
+                    <div><%= holding.amount %></div>
+                    <div><%= format(priceList[holding.asset], currency) %></div>
+                    <div><%= format((holding.amount * priceList[holding.asset]), currency) %></div>
+                    <div class="update/remove">
+                        <button><a href="/update?asset=<%= holding.asset %>" style="color: black;">Update</a></button>
+                        <button><a href="/delete?asset=<%= holding.asset %>" style="color: black;">Remove</a></button>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+        <script src="../client.js"></script>
+    </body>
+</html>
