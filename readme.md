@@ -6,7 +6,10 @@ The main benefit from that is to avoid sharing your information about your holdi
 
 I used the coingecko api for price feed.
 
-Whate you can do with this app : - Add crypto to your portfolio : one important thing when doing so is to use the coingecko id name that can be found on their website on each coin page under Overview -> Widget - Update a specific crypto amount - Remove a crypto from your portfolio
+Whate you can do with this app : 
+- Add crypto to your portfolio : one important thing when doing so is to use the coingecko id name that can be found on their website on each coin page under Overview -> Widget 
+- Update a specific crypto amount 
+- Remove a crypto from your portfolio
 
 I might add some more features in the future like sell/buy orders and keeping track of your portfolio performance.
 
